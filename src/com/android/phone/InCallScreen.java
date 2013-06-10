@@ -2635,6 +2635,7 @@ public class InCallScreen extends Activity
 
                 if ((mLastDisconnectCause != Connection.DisconnectCause.INCOMING_MISSED)
                         && (mLastDisconnectCause != Connection.DisconnectCause.INCOMING_REJECTED)
+                        && PhoneUtils.PhoneSettings.showCallLogAfterCall(this)
                         && !isPhoneStateRestricted()
                         && PhoneGlobals.sVoiceCapable) {
                     final Intent intent = mApp.createPhoneEndIntentUsingCallOrigin();
