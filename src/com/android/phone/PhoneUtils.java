@@ -420,6 +420,10 @@ public class PhoneUtils {
         private static SharedPreferences getPrefs(Context context) {
             return PreferenceManager.getDefaultSharedPreferences(context);
         }
+        static boolean showCallLogAfterCall(Context context) {
+            return PreferenceManager.getDefaultSharedPreferences(context)
+                      .getBoolean("button_calllog_after_call", false);
+        }
     }
 
     static boolean hangupRingingCall(Call ringing) {
